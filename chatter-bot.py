@@ -8,10 +8,10 @@ client = discord.Client()
 
 
 # As a rule discord require these events to be run as coroutines
-@client.event
-async def on_ready():
-    general_channel = client.get_channel(679832307066208440)
-    await general_channel.send('Hello Juniors!')
+# @client.event
+# async def on_ready():
+#     general_channel = client.get_channel(679832307066208440)
+#     await general_channel.send('Hello Juniors!')
 
 
 @client.event
