@@ -1,5 +1,6 @@
 # Chatter Bot for Discord
 import discord
+import config
 
 
 # Initialize the bot here
