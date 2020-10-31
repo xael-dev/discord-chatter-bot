@@ -28,4 +28,4 @@ async def on_message(message):
         await cromulon_channel.send("The version is 1.0!")
 
 # Run the client on the server
-client.run("NzcxODYxODk3Nzg4MTI5Mjgx.X5ySaA.jLrUMauYqNPo9eHSYGkOUGOtcoo")
+client.run(config.bot_token)
