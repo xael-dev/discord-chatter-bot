@@ -27,7 +27,15 @@ async def on_message(message):
 
     if message.content == 'chatter what is your version':
         cromulon_channel = client.get_channel(707682506291412993)
-        await cromulon_channel.send("The version is 1.0!")
+
+        myEmbed = discord.Embed(title="Current Version", description="This bot is in version 1.0", color=0x98ff98)
+        myEmbed.add_field(name="Version Code: ", value="v1.0.0",inline=False)
+        myEmbed.add_field(name="Date Released:", value="November 1st, 2020", inline=False)
+        myEmbed.set_footer(text="Release version message")
+        myEmbed.set_author(name="Alexander Harris")
+
+
+        await cromulon_channel.send(embed=myEmbed)
 
 # Run the client on the server
 client.run(config.bot_token)
