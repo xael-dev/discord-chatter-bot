@@ -1,4 +1,5 @@
 # Chatter Bot for Discord
+# Written by @alexanderJHarris on github
 import discord
 import config
 
@@ -7,7 +8,8 @@ import config
 client = discord.Client()
 
 
-# As a rule discord require these events to be run as coroutines
+# As a rule discord requires any events to be run as coroutines (async functions in python)
+
 # @client.event
 # async def on_ready():
 #     general_channel = client.get_channel(679832307066208440)
