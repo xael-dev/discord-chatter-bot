@@ -1,8 +1,13 @@
 # Chatter Bot for Discord
 # Written by @alexanderJHarris on github
+
+# Discord imports
 import discord
 from discord.ext import commands
+
+# Python imports
 import config
+import pandas
 
 
 # Initialize the bot object
