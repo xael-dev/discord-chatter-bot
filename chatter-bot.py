@@ -27,17 +27,27 @@ async def version(context):  # Context is taking the scope of where this event i
 
     await context.message.channel.send(embed=myEmbed) #using the context param above to send the embed to requested channel
 
+@client.event
+async def on_message(message):
 
-# @client.event
-# async def on_ready():
-#     general_channel = client.get_channel(679832307066208440)
-#     await general_channel.send('Hello Juniors!')
+    if message == 'send a dm':
+        await message.author.send("This is a test DM, have a good day")
 
+    if message.content == "Append":
+        #Add a row to dataframe containing this message
+        dataframe = pandas.read_csv(config.project_filepath, index_col=0)
+        dataframe = dataframe.append({"A":"This is the message that I want to append"}, ignore_index=True)
+        dataframe.to_csv(config.project_filepath)
+    await client.process_commands(message)
 
-# @client.event
-# async def on_disconnect():
-#     cromulon_channel = client.get_channel(707682506291412993)
-#     await cromulon_channel.send("Goodbye!")
+@client.event
+async def on_ready():
+    await client.change_presence(status=discord.Status.idle, activity=discord.Game("Nunya"))
+
+    # dataframe = pandas.DataFrame({"A":["Hello","Test"]})
+
+    # dataframe.to_csv(config.project_filepath)
+
 
 # Run the client on the server
 client.run(config.bot_token)
