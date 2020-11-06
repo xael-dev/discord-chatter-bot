@@ -1,7 +1,7 @@
 import os
+import logging
 from discord.ext import commands
 from settings import *
-import logging
 
 bot = commands.Bot(command_prefix="~")
 
