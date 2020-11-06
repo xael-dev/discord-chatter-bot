@@ -1,1 +1,2 @@
-DISCORD_BOT_TOKEN = "TEST"
+import os
+DISCORD_BOT_TOKEN = os.getenv("DISCORD_BOT_TOKEN", False)
