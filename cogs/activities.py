@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 
+from utils import create_voice_channel, get_category_by_name
+
 class Activities(commands.Cog):
 
     current_streamers = []
