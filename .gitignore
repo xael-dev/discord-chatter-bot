@@ -135,3 +135,4 @@ __pycache__
 _global
 .env
 .env.debug
+nodemon.json
