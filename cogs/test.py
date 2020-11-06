@@ -7,7 +7,6 @@ class Testing(commands.Cog):
     @commands.command()
     async def hello(self, context, *args):
         await context.send(','.join(args))
-        pass
 
 def setup(bot):
     bot.add_cog(Testing(bot))
