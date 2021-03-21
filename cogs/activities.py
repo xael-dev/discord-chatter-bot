@@ -13,7 +13,8 @@ class Activities(commands.Cog):
 
     @commands.Cog.listener()
     async def on_ready(self):
-        activity = discord.Activity(name="Type ~help", type=discord.ActivityType.playing)
+        activity = discord.Activity(
+            name="Type ~help", type=discord.ActivityType.playing)
         await self.bot.change_presence(activity=activity)
 
     @commands.Cog.listener()  # Listening for user actions on voice channels
@@ -29,7 +30,8 @@ class Activities(commands.Cog):
 
         if before.channel and after.channel:
             if before.channel.id != after.channel.id:
-                print(f"{member.name} switched voice channels to {after.channel.name} channel")
+                print(
+                    f"{member.name} switched voice channels to {after.channel.name} channel")
             else:
                 if member.voice.self_stream:
                     print(f"{member.name} started streaming!")
@@ -51,13 +53,13 @@ class Activities(commands.Cog):
 
         if after.channel is not None:
             if after.channel.name == "template":
-                channel = await create_voice_channel(after.channel.guild, f"{member.name}-conference".lower(), category_name="conference")
+                channel = await create_voice_channel(after.channel.guild, f"{member.name}-conference".lower(), category_name="Conference")
 
                 if channel is not None:
                     await member.move_to(channel)
 
         if before.channel is not None:
-            if before.channel.category.id == get_category_by_name(before.channel.guild, "conference").id:
+            if before.channel.category.id == get_category_by_name(before.channel.guild, "Conference").id:
                 print(f"{member.name} has left temporary channel")
 
                 if before.channel.name == "template":
