@@ -136,3 +136,4 @@ _global
 .env
 .env.debug
 nodemon.json
+credentials.json
