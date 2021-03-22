@@ -8,7 +8,7 @@ from google.auth.transport.requests import Request
 # Delete token.pickle if the following needs editing
 SCOPES = ['https://www.googleapis.com/auth/calendar']
 
-CREDENTIALS_FILE = './credentials.json'
+CREDENTIALS_FILE = '../credentials.json'
 
 def get_calendar_service():
     creds = None
