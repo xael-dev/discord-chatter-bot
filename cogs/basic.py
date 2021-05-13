@@ -1,6 +1,7 @@
 import datetime
+import requests
 from discord.ext import commands
-
+from discord_calendar import *
 
 
 class Basic(commands.Cog):
