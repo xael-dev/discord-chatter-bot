@@ -18,10 +18,15 @@ class Basic(commands.Cog):
         print("Voice chat name has changed to" + str(args))
         await context.send(" ".join(args))
 
+    #Calendar output command
+    @commands.command()
+    async def list_calendars(self, context):
+        test_output = quickstart.main
+        await context.send(test_output)
+
     # @commands.command()
     # abstract it out to its own code in the future
     # async def get_calendars(self, ctx):
-
 
     # @commands.command()
     # async def get_events(self, ctx):
